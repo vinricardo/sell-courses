@@ -1,0 +1,45 @@
+@import '../../../../assets/styles/colors'
+
+section
+  display: grid
+  grid-template-areas: "first center last"
+  grid-template-columns: repeat(3, 1fr)
+  #first-piece
+    font-family: 'Krub', monospace
+    display: grid
+    grid-template-areas: 'head head' 'rotate become'
+    grid-auto-columns: 130px 170px
+    p
+      color: $text-color
+      &:first-child
+        grid-area: head
+        font-size: 8.25rem
+        font-weight: bold
+        span
+          color: $purple
+      &:nth-child(2)
+        grid-area: rotate
+        font-size: 2.69rem
+        font-weight: 300
+        position: absolute
+        transform-origin: 16rem 16rem
+        transform: rotate(-90deg)
+    div
+        grid-area: become
+        span
+          color: $text-color
+          font-weight: bold
+          &:first-child
+            font-size: 5rem
+          &:last-child
+            width: 8rem
+            display: inline-block
+  #center-piece
+    grid-area: center
+    align-self: center
+    justify-self: center
+    #circle
+      background: $purple
+      height: 300px
+      width: 300px
+      border-radius: 50%
