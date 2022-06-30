@@ -4,11 +4,13 @@ section
   display: grid
   grid-template-areas: "first center last"
   grid-template-columns: repeat(3, 1fr)
+  font-family: 'Krub', monospace
   #first-piece
-    font-family: 'Krub', monospace
+    grid-area: first
     display: grid
     grid-template-areas: 'head head' 'rotate become'
     grid-auto-columns: 130px 170px
+    margin-left: 2rem
     p
       color: $text-color
       &:first-child
@@ -26,6 +28,7 @@ section
         transform: rotate(-90deg)
     div
         grid-area: become
+        margin-top: -10rem
         span
           color: $text-color
           font-weight: bold
@@ -36,10 +39,72 @@ section
             display: inline-block
   #center-piece
     grid-area: center
-    align-self: center
-    justify-self: center
+    display: flex
+    flex-direction: column
+    align-items: center
     #circle
       background: $purple
-      height: 300px
-      width: 300px
+      height: 22rem
+      width: 22rem
       border-radius: 50%
+      margin-top: 14rem
+    img
+      width: 14rem
+      height: auto
+      margin-top: -30rem
+  #last-piece
+    grid-area: last
+    display: flex
+    flex-direction: column
+    justify-content: center
+    margin-top: 2rem
+    #card-edition
+      display: flex
+      justify-content: flex-end
+      .card
+        border: 3px  solid $text-color
+        margin-right: -5px
+        border-right: 0px solid $text-color
+        padding: .5rem 1rem
+        width: 8rem
+        p
+          color: $text-color
+          font-weight: bold
+          line-height: 0px
+          &:first-child
+            font-size: 1rem
+            letter-spacing: 4px
+          &:last-child
+            font-size: 2rem
+            letter-spacing: 4px
+    #text-begin
+      width: 80%
+      p
+        color: $text-color
+        &:first-child
+          font-size: 2rem
+          font-weight: bold
+          margin-bottom: 1rem
+        &:last-child
+          font-size: 1rem
+          font-weight: 600
+          text-align: justify
+          word-break: break-all
+    #buttons
+      margin-top: 2rem
+      button
+        font-family: 'Oswald', sans-serif
+        &:first-child
+          border: 0
+          background: $purple
+          color: $text-color
+          padding: 1rem
+          width: 8rem
+          letter-spacing: 2px
+        &:last-child
+          border: 0
+          background: $dark-bg
+          color: $text-color
+          padding: 1rem
+          width: 8rem
+          letter-spacing: 2px
