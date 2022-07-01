@@ -4,14 +4,8 @@ import { NgModule } from '@angular/core';
 import { HomeComponent } from './home/home.component';
 import { PortalRoutingModule } from './portal-routing.module';
 
-
 @NgModule({
-  declarations: [
-    HomeComponent
-  ],
-  imports: [
-    CommonModule,
-    PortalRoutingModule
-  ]
+  declarations: [HomeComponent],
+  imports: [CommonModule, PortalRoutingModule],
 })
-export class PortalModule { }
+export class PortalModule {}
