@@ -1,0 +1,40 @@
+@import '../../../../assets/styles/colors'
+
+section
+  font-family: 'Krub', monospace
+  span
+    font-size: 1rem
+    &:first-child
+      font-size: 5rem
+      margin-right: 1rem
+    color: $text-color
+    font-weight: bold
+  #first-discover
+    margin-top:5rem
+    position: absolute
+    transform: rotate(-90deg)
+    left: -3.5rem
+  #second-discover
+    margin-top:5rem
+    position: absolute
+    right: -3.5rem
+    transform: rotate(90deg)
+  #title
+    min-height: 30rem
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    #texts
+      text-align: center
+      color: $text-color
+      font-size: 4rem
+      p
+        &:first-child,&:last-child
+          font-weight: bold
+  #explore
+    font-size: 3.06rem
+    font-weight: bold
+    display: flex
+    justify-content: space-between
+    padding: 0 3rem
