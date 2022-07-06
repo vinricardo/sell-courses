@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
 
 import { InviteComponent } from './invite/invite.component';
+import { ListCourseComponent } from './list-course/list-course.component';
 import { PresentationComponent } from './presentation/presentation.component';
 import { StatsComponent } from './stats/stats.component';
 
@@ -14,6 +15,7 @@ export class HomeComponent implements OnInit {
   entryPresentation?: ViewContainerRef;
   @ViewChild('stats', { read: ViewContainerRef }) entryStats?: ViewContainerRef;
   @ViewChild('invite', { read: ViewContainerRef }) entryInvite?: ViewContainerRef;
+  @ViewChild('list', { read: ViewContainerRef }) entryList?: ViewContainerRef;
 
   constructor() {}
 
@@ -23,5 +25,6 @@ export class HomeComponent implements OnInit {
     this.entryPresentation?.createComponent(PresentationComponent);
     this.entryStats?.createComponent(StatsComponent);
     this.entryInvite?.createComponent(InviteComponent);
+    this.entryList?.createComponent(ListCourseComponent);
   }
 }

@@ -1,0 +1,15 @@
+<section>
+  <header>
+    <h2>FIND <span>Your Course.</span></h2>
+    <div>
+      <p><span>.</span> EDITION</p>
+      <p>2022</p>
+    </div>
+  </header>
+  <div class="cards">
+    <course-card *ngFor="let numberCard of ['01','02','03','04']" [numberCard]="numberCard"></course-card>
+  </div>
+  <footer>
+    <p>MORE COURSES</p>
+  </footer>
+</section>
