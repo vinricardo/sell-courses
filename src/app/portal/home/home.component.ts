@@ -5,6 +5,7 @@ import { InviteComponent } from './invite/invite.component';
 import { ListCourseComponent } from './list-course/list-course.component';
 import { PresentationComponent } from './presentation/presentation.component';
 import { StatsComponent } from './stats/stats.component';
+import { ThumbnailComponent } from './thumbnail/thumbnail.component';
 import { WhyUsComponent } from './why-us/why-us.component';
 
 @Component({
@@ -20,7 +21,7 @@ export class HomeComponent implements OnInit {
   @ViewChild('list', { read: ViewContainerRef }) entryList?: ViewContainerRef;
   @ViewChild('about', { read: ViewContainerRef }) entryAboutUs?: ViewContainerRef;
   @ViewChild('why', { read: ViewContainerRef }) entryWhyUs?: ViewContainerRef;
-
+  @ViewChild('thumbnail', { read: ViewContainerRef }) entryThumbnail?: ViewContainerRef;
   constructor() {}
 
   ngOnInit(): void {}
@@ -32,5 +33,6 @@ export class HomeComponent implements OnInit {
     this.entryList?.createComponent(ListCourseComponent);
     this.entryAboutUs?.createComponent(AboutUsComponent);
     this.entryWhyUs?.createComponent(WhyUsComponent);
+    this.entryThumbnail?.createComponent(ThumbnailComponent);
   }
 }
