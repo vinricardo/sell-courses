@@ -1,0 +1,58 @@
+@import '../../../../assets/styles/colors'
+
+section
+  display: grid
+  grid-template-areas: "model text"
+  grid-template-columns: 1fr 1fr
+  #model
+    #circle
+      height: 25rem
+      width: 25rem
+      border-radius: 50%
+      background: $purple
+      position: absolute
+      z-index: 1
+      left: 11rem
+      margin-top: 2rem
+    img
+      position: absolute
+      z-index: 2
+      left: 13rem
+      margin-top: -3rem
+  #text
+    padding: 3rem
+    width: 35rem
+    color: $text-color
+    font-family: 'Krub', monospace
+    * + *
+      margin-bottom: 3rem
+    h3
+      font-size: 3.813rem
+      margin-bottom: 3rem
+      font-weight: bold
+      span
+        color: $purple
+        font-weight: lighter
+    p
+      font-size: 0.875rem
+      font-weight: bold
+    button
+      color: $text-color
+      background: $purple
+      font-family: 'Krub', monospace
+      margin: 1.4rem 0
+      font-weight: bold
+      border: 0
+      width: 7rem
+      height: 2.5rem
+      &:hover
+        opacity: .8
+    #explore
+      opacity: .5
+      font-size: 6.313rem
+      color: #000
+      font-weight: bold
+      position: absolute
+      right: -12rem
+      margin-top: -10rem
+      transform: rotate(-90deg)
