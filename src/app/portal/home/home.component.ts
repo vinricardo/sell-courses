@@ -5,6 +5,7 @@ import { InviteComponent } from './invite/invite.component';
 import { ListCourseComponent } from './list-course/list-course.component';
 import { PresentationComponent } from './presentation/presentation.component';
 import { StatsComponent } from './stats/stats.component';
+import { WhyUsComponent } from './why-us/why-us.component';
 
 @Component({
   selector: 'app-home',
@@ -18,6 +19,7 @@ export class HomeComponent implements OnInit {
   @ViewChild('invite', { read: ViewContainerRef }) entryInvite?: ViewContainerRef;
   @ViewChild('list', { read: ViewContainerRef }) entryList?: ViewContainerRef;
   @ViewChild('about', { read: ViewContainerRef }) entryAboutUs?: ViewContainerRef;
+  @ViewChild('why', { read: ViewContainerRef }) entryWhyUs?: ViewContainerRef;
 
   constructor() {}
 
@@ -29,5 +31,6 @@ export class HomeComponent implements OnInit {
     this.entryInvite?.createComponent(InviteComponent);
     this.entryList?.createComponent(ListCourseComponent);
     this.entryAboutUs?.createComponent(AboutUsComponent);
+    this.entryWhyUs?.createComponent(WhyUsComponent);
   }
 }
