@@ -1,0 +1,66 @@
+@import '../../../../assets/styles/colors'
+
+section
+  font-family: 'Krub', monospace
+  color: $text-color
+  .point
+    height: 20px
+    width: 20px
+    background: $purple
+    border-radius: 50%
+    position: absolute
+  #text
+    display: grid
+    grid-template-areas: "description model"
+    grid-auto-columns: 1fr 1fr
+    padding: 8rem
+    #model
+      grid-area: model
+    #description
+      * + *
+        margin-bottom: 3rem
+      grid-area: description
+      display: flex
+      flex-direction: column
+      font-weight: bold
+      h3
+        font-size: 3.813rem
+        margin-bottom: 3rem
+        span
+          color: $purple
+          font-weight: lighter
+      p
+        width: 40rem
+        font-size: 0.875rem
+      ul
+        display: grid
+        grid-template-columns: 1fr 1fr
+        padding: 0 1rem
+        li
+          list-style: square
+          font-size: 2rem
+          color: $purple
+          list-style-position: inside
+          span
+            font-size: 0.875rem
+            color: $text-color
+      button
+        color: $text-color
+        background: $purple
+        font-family: 'Krub', monospace
+        margin: 1.4rem 0
+        font-weight: bold
+        border: 0
+        width: 7rem
+        height: 2.5rem
+        &:hover
+          opacity: .8
+  #model
+    #circle
+      height: 25rem
+      width: 25rem
+      border-radius: 50%
+      background: $purple
+      margin-bottom: -31.25rem
+      margin-left: 3rem 
+
