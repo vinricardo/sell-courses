@@ -1,15 +1,21 @@
 <section>
   <div class="orbit">
-    <app-orbit [stylesCircle]="{'left':'-25rem', 'marginTop': '15rem','transform': 'rotate(-15deg)'}"></app-orbit>
+    <app-orbit
+      [stylesCircle]="{
+        left: '-25rem',
+        marginTop: '15rem',
+        transform: 'rotate(-15deg)'
+      }"
+    ></app-orbit>
     <div class="point" style="right: 10%"></div>
   </div>
-  <div id="text" >
+  <div id="text">
     <div id="description">
-      <h3>
-        About <span>us .</span>
-      </h3>
+      <h3>About <span>us .</span></h3>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Quis ipsum suspendisse.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua Quis ipsum
+        suspendisse.
       </p>
       <ul>
         <li><span>LOREM IPSUM DOLOR.</span></li>
@@ -21,11 +27,17 @@
     </div>
     <div id="model">
       <div id="circle"></div>
-      <img src="../../../../assets/imgs/person-2.png" alt="Pessoa agachada"/>
+      <img src="assets/imgs/person-2.png" alt="Pessoa agachada" />
     </div>
   </div>
-  <div class="orbit" style="margin-top: 5rem;">
+  <div class="orbit" style="margin-top: 5rem">
     <div class="point" style="left: 40%"></div>
-    <app-orbit [stylesCircle]="{'right':'-25rem', 'marginTop': '15rem','transform': 'rotate(-150deg)'}"></app-orbit>
+    <app-orbit
+      [stylesCircle]="{
+        right: '-25rem',
+        marginTop: '15rem',
+        transform: 'rotate(-150deg)'
+      }"
+    ></app-orbit>
   </div>
 </section>
