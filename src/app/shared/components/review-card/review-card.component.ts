@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 import { RatingComponent } from '../rating/rating.component';
 
@@ -10,6 +10,7 @@ import { RatingComponent } from '../rating/rating.component';
   styleUrls: ['./review-card.component.sass'],
 })
 export class ReviewCardComponent implements OnInit {
+  @Input() user!: { name: string; path: string };
   constructor() {}
 
   ngOnInit(): void {}
