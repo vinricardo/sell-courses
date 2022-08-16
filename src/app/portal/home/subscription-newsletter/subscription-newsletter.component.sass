@@ -1,0 +1,56 @@
+@import '../../../../assets/styles/colors'
+section
+  display: flex
+  margin: 5rem auto auto auto
+  justify-content: center
+  flex-direction: row-reverse
+  img
+    width: 45rem
+    height: auto
+  #form
+    width: 50%
+    display: flex
+    align-items: center
+    flex-direction: column
+    font-family: 'Krub', monospace
+    h2
+      display: flex
+      flex-direction: column
+      text-align: center
+      text-transform: uppercase
+      font-weight: bold
+      font-size: 2.5rem
+      color: $text-color
+      span
+        color: $purple
+        text-transform: lowercase
+        font-weight: 400
+    span
+      font-weight: bold
+      color: $text-color
+      width: 25.5rem
+      text-align: center
+      margin-top: 1rem
+      margin-bottom: 2rem
+    input,textarea
+      padding: 1rem
+      margin: 1rem auto
+      width: 25.5rem
+      min-height: 3rem
+      border: 3px solid $purple
+      background: #00000000
+      color: $text-color
+      font-weight: bold
+      &:focus
+        outline: #a984f980 5px solid
+    textarea
+      min-height: 7rem
+    button
+      color: $text-color
+      background: $purple
+      font-family: 'Oswald', monospace
+      margin: 1.4rem 0
+      font-weight: bold
+      border: 0
+      width: 8rem
+      height: 3rem
