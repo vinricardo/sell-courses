@@ -1,0 +1,32 @@
+@import '../../../../assets/styles/colors'
+
+section
+  display: grid
+  grid-template-areas: "logo options button"
+  grid-template-columns: 1fr 2fr 1fr
+  font-weight: bold
+  padding: 2rem
+  font-family: 'Oswald', monospace
+  .options
+    grid-area: options
+    display: flex
+    justify-content: space-evenly
+    color: $text-color
+    p
+      cursor: pointer
+      width: max-content
+      &.selected
+        border-bottom: $text-color 3px solid
+  #section-button
+    grid-area: button
+    display: flex
+    justify-content: flex-end
+    button
+      background: $text-color
+      color: $dark-bg
+      border: 0
+      font-weight: 500
+      padding: .5rem 1rem
+      cursor: pointer
+      &:hover
+        opacity: .8

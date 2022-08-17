@@ -1,0 +1,10 @@
+<section>
+  <div class="logo"></div>
+  <div class="options">
+    <p [ngClass]="{'selected': option.name == selectedOption.name}"
+        *ngFor="let option of optionsMenu" (click)="scroll(option.redirect)" >{{option.name}}</p>
+  </div>
+  <div id="section-button">
+    <button>SIGN IN</button>
+  </div>
+</section>
