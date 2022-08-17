@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
 import { FooterComponent } from 'src/app/shared/components/footer/footer.component';
+import { HeaderComponent } from 'src/app/shared/components/header/header.component';
 
 import { AboutUsComponent } from './about-us/about-us.component';
 import { InviteComponent } from './invite/invite.component';
@@ -17,6 +18,8 @@ import { WhyUsComponent } from './why-us/why-us.component';
   styleUrls: ['./home.component.sass'],
 })
 export class HomeComponent implements OnInit {
+  @ViewChild('header', { read: ViewContainerRef })
+  entryHeader?: ViewContainerRef;
   @ViewChild('presentation', { read: ViewContainerRef })
   entryPresentation?: ViewContainerRef;
   @ViewChild('stats', { read: ViewContainerRef }) entryStats?: ViewContainerRef;
@@ -39,6 +42,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {}
 
   ngAfterContentChecked(): void {
+    this.clearEntries()
+    this.entryHeader?.createComponent(HeaderComponent);
     this.entryPresentation?.createComponent(PresentationComponent);
     this.entryStats?.createComponent(StatsComponent);
     this.entryInvite?.createComponent(InviteComponent);
@@ -48,6 +53,20 @@ export class HomeComponent implements OnInit {
     this.entryThumbnail?.createComponent(ThumbnailComponent);
     this.entryReviews?.createComponent(ReviewsComponent);
     this.entryNewsletter?.createComponent(SubscriptionNewsletterComponent);
-    this.entryFooter?.createComponent(FooterComponent)
+    this.entryFooter?.createComponent(FooterComponent);
+  }
+
+  clearEntries(){
+    this.entryHeader?.clear();
+    this.entryPresentation?.clear();
+    this.entryStats?.clear();
+    this.entryInvite?.clear();
+    this.entryList?.clear();
+    this.entryAboutUs?.clear();
+    this.entryWhyUs?.clear();
+    this.entryThumbnail?.clear();
+    this.entryReviews?.clear();
+    this.entryNewsletter?.clear();
+    this.entryFooter?.clear();
   }
 }
