@@ -6,6 +6,7 @@ import { ListCourseComponent } from './list-course/list-course.component';
 import { PresentationComponent } from './presentation/presentation.component';
 import { ReviewsComponent } from './reviews/reviews.component';
 import { StatsComponent } from './stats/stats.component';
+import { SubscriptionNewsletterComponent } from './subscription-newsletter/subscription-newsletter.component';
 import { ThumbnailComponent } from './thumbnail/thumbnail.component';
 import { WhyUsComponent } from './why-us/why-us.component';
 
@@ -28,6 +29,8 @@ export class HomeComponent implements OnInit {
   entryThumbnail?: ViewContainerRef;
   @ViewChild('reviews', { read: ViewContainerRef })
   entryReviews?: ViewContainerRef;
+  @ViewChild('newsletter', { read: ViewContainerRef })
+  entryNewsletter?: ViewContainerRef;
   constructor() {}
 
   ngOnInit(): void {}
@@ -41,5 +44,6 @@ export class HomeComponent implements OnInit {
     this.entryWhyUs?.createComponent(WhyUsComponent);
     this.entryThumbnail?.createComponent(ThumbnailComponent);
     this.entryReviews?.createComponent(ReviewsComponent);
+    this.entryNewsletter?.createComponent(SubscriptionNewsletterComponent);
   }
 }
