@@ -1,0 +1,46 @@
+@import '../../../../assets/styles/colors'
+section
+  background: $purple
+  display: grid
+  grid-template-areas: "about do signup" ". . icons"
+  padding: 5rem
+  font-family: 'Krub', monospace
+  color: $text-color
+  h3:not(:last-child)
+    width: max-content
+    border-bottom: 2px solid $text-color
+  h3
+    font-size: 1.5rem
+    margin-bottom: 1rem
+  p
+    margin: .5rem 0rem
+    width: max-content
+    font-weight: 500
+    &:hover
+      opacity: .5
+      cursor: pointer
+  #about
+    grid-area: about
+  #do
+    grid-area: do
+  #signup
+    grid-area: signup
+    h3
+      display: flex
+      flex-direction: column
+      text-align: end
+  #icons
+    grid-area: icons
+    justify-self: end
+    display: flex
+    align-items: center
+    * + *
+      margin-left: 2rem
+    p:hover
+      opacity: 1
+      cursor: default
+    img
+      width: 3rem
+      cursor: pointer
+      &:hover
+        opacity: .8
