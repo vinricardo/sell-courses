@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
+import { FooterComponent } from 'src/app/shared/components/footer/footer.component';
 
 import { AboutUsComponent } from './about-us/about-us.component';
 import { InviteComponent } from './invite/invite.component';
@@ -31,6 +32,8 @@ export class HomeComponent implements OnInit {
   entryReviews?: ViewContainerRef;
   @ViewChild('newsletter', { read: ViewContainerRef })
   entryNewsletter?: ViewContainerRef;
+  @ViewChild('footer', { read: ViewContainerRef })
+  entryFooter?: ViewContainerRef;
   constructor() {}
 
   ngOnInit(): void {}
@@ -45,5 +48,6 @@ export class HomeComponent implements OnInit {
     this.entryThumbnail?.createComponent(ThumbnailComponent);
     this.entryReviews?.createComponent(ReviewsComponent);
     this.entryNewsletter?.createComponent(SubscriptionNewsletterComponent);
+    this.entryFooter?.createComponent(FooterComponent)
   }
 }
